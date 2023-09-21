@@ -11,7 +11,6 @@ import 'package:material_floating_search_bar_2/material_floating_search_bar_2.da
 
 class MapBody extends StatefulWidget {
   const MapBody({super.key});
-
   @override
   State<MapBody> createState() => _MapBodyState();
 }
@@ -70,5 +69,10 @@ class _MapBodyState extends State<MapBody> {
         child: const Icon(Icons.place),
       ),
     );
+  }
+  @override
+  void dispose() {
+    controller!.dispose();
+    super.dispose();
   }
 }
