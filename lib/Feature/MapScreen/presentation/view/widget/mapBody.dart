@@ -3,11 +3,14 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_maps/Core/Utils/LocationHelper.dart';
 import 'package:flutter_maps/Core/Utils/mycolor.dart';
+import 'package:flutter_maps/Feature/MapScreen/presentation/view/widget/BuildFloatingSearchBar.dart';
+import 'package:flutter_maps/Feature/MapScreen/presentation/view/widget/buildMap.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:material_floating_search_bar_2/material_floating_search_bar_2.dart';
 
 class MapBody extends StatefulWidget {
-  MapBody({super.key});
+  const MapBody({super.key});
 
   @override
   State<MapBody> createState() => _MapBodyState();
@@ -16,6 +19,7 @@ class MapBody extends StatefulWidget {
 class _MapBodyState extends State<MapBody> {
   final Completer<GoogleMapController> _mapController =
       Completer<GoogleMapController>();
+  FloatingSearchBarController? controller;
   static Position? position;
   static final CameraPosition myCurrentCameraLocation = CameraPosition(
     bearing: 0,
@@ -36,21 +40,9 @@ class _MapBodyState extends State<MapBody> {
         .animateCamera(CameraUpdate.newCameraPosition(myCurrentCameraLocation));
   }
 
-  Widget buildMap() {
-    return GoogleMap(
-      initialCameraPosition: myCurrentCameraLocation,
-      mapType: MapType.normal,
-      myLocationEnabled: true,
-      zoomControlsEnabled: false,
-      myLocationButtonEnabled: false,
-      onMapCreated: (controller) {
-        _mapController.complete(controller);
-      },
-    );
-  }
-
   @override
   void initState() {
+    controller = FloatingSearchBarController();
     getCurrentLocation();
     super.initState();
   }
@@ -58,13 +50,21 @@ class _MapBodyState extends State<MapBody> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: position != null
-          ? buildMap()
-          : const Center(
-              child: CircularProgressIndicator(
-                color: MyColors.blue,
+      body: Stack(children: [
+        position != null
+            ? BuildMap(
+                myCurrentCameraLocation: myCurrentCameraLocation,
+                mapController: _mapController,
+              )
+            : const Center(
+                child: CircularProgressIndicator(
+                  color: MyColors.blue,
+                ),
               ),
-            ),
+        FloatingSearchBarWidget(
+          controller: controller,
+        )
+      ]),
       floatingActionButton: FloatingActionButton(
         onPressed: _goToMyCurrentLocation,
         child: const Icon(Icons.place),
