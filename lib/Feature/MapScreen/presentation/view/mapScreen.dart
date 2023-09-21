@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_maps/Feature/MapScreen/presentation/view/widget/mapBody.dart';
+
+import 'widget/mapBody.dart';
 
 class MapScreen extends StatelessWidget {
   const MapScreen({super.key});

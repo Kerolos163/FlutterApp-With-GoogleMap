@@ -1,10 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_maps/Core/Utils/LocationHelper.dart';
-import 'package:flutter_maps/Core/Utils/mycolor.dart';
-import 'package:flutter_maps/Feature/MapScreen/presentation/view/widget/BuildFloatingSearchBar.dart';
-import 'package:flutter_maps/Feature/MapScreen/presentation/view/widget/buildMap.dart';
+import '../../../../../Core/Utils/LocationHelper.dart';
+import '../../../../../Core/Utils/mycolor.dart';
+import 'BuildFloatingSearchBar.dart';
+import 'buildMap.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:material_floating_search_bar_2/material_floating_search_bar_2.dart';

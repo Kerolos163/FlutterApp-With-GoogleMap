@@ -1,10 +1,9 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_maps/Core/constant.dart';
-import 'package:go_router/go_router.dart';
-
 import 'package:flutter_maps/Feature/MapScreen/presentation/view/mapScreen.dart';
 import 'package:flutter_maps/Feature/MapScreen/presentation/viewmodel/cubit/cubit.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../Feature/OTP_Screen/Presentation/View/OTPScreen.dart';
 import '../../Feature/OTP_Screen/Presentation/ViewModel/cubit/cubit.dart';

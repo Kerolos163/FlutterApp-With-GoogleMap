@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../ViewModel/cubit/cubit.dart';
 
 import '../../../../../Core/Utils/mycolor.dart';
+import '../../ViewModel/cubit/cubit.dart';
 
 // ignore: must_be_immutable
 class TextFieldWidget extends StatelessWidget {

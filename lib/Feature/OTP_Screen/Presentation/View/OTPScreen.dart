@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_maps/Core/Utils/AppRoute.dart';
-import 'package:flutter_maps/Core/Widget/showProgressIndicator.dart';
-import 'package:flutter_maps/Feature/OTP_Screen/Presentation/ViewModel/cubit/cubit.dart';
-import 'package:flutter_maps/Feature/OTP_Screen/Presentation/ViewModel/cubit/state.dart';
+import '../../../../Core/Utils/AppRoute.dart';
+import '../../../../Core/Widget/showProgressIndicator.dart';
+import '../ViewModel/cubit/cubit.dart';
+import '../ViewModel/cubit/state.dart';
 import 'package:go_router/go_router.dart';
 
 import 'Widget/OTPBody.dart';

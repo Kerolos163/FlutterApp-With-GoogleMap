@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_maps/Feature/OTP_Screen/Presentation/ViewModel/cubit/cubit.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
 import '../../../../../Core/Utils/mycolor.dart';
+import '../../ViewModel/cubit/cubit.dart';
 
 class OTPField extends StatelessWidget {
   const OTPField({super.key});
