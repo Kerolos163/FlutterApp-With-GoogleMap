@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
+
 import '../../../../Core/Utils/AppRoute.dart';
 import '../../../../Core/Widget/showProgressIndicator.dart';
 import '../ViewModel/cubit/cubit.dart';
 import '../ViewModel/cubit/state.dart';
-import 'package:go_router/go_router.dart';
-
 import 'Widget/OTPBody.dart';
 
 class OTPScreen extends StatelessWidget {

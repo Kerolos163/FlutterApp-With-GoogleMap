@@ -1,9 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'Core/constant.dart';
 
 import 'Core/Utils/AppRoute.dart';
+import 'Core/constant.dart';
 
 
 void main() async {

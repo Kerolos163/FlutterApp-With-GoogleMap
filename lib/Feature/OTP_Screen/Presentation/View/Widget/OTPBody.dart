@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import "../../../../../Core/Widget/showProgressIndicator.dart";
-import '../../ViewModel/cubit/cubit.dart';
+
 import '../../../../../Core/Utils/mycolor.dart';
 import '../../../../../Core/Widget/ButtonConatiner.dart';
+import "../../../../../Core/Widget/showProgressIndicator.dart";
+import '../../ViewModel/cubit/cubit.dart';
 import 'VerifyInfo.dart';
 import 'pinCodeField.dart';
 

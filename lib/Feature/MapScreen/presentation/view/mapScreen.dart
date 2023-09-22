@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_maps/Feature/Drawer/Presentation/view/DrawerWidget.dart';
 
+import '../../../Drawer/Presentation/view/DrawerWidget.dart';
 import 'widget/mapBody.dart';
 
 class MapScreen extends StatelessWidget {

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_maps/Core/Utils/mycolor.dart';
-import 'package:flutter_maps/Core/constant.dart';
+
+import '../../../../../Core/Utils/mycolor.dart';
+import '../../../../../Core/constant.dart';
 
 class DrawerHeaderWidget extends StatelessWidget {
   const DrawerHeaderWidget({super.key});
