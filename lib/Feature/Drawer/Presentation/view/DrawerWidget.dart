@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_maps/Feature/Drawer/Presentation/viewmodel/cubit/cubit.dart';
 
 import 'widget/DrawerBody.dart';
 
@@ -7,10 +9,13 @@ class DrawerScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.blue[100],
-      child: const SafeArea(
-        child: DrawerBody(),
+    return BlocProvider(
+      create: (context) => DrawerCubit(),
+      child: Container(
+        color: Colors.blue[100],
+        child: const SafeArea(
+          child: DrawerBody(),
+        ),
       ),
     );
   }

@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_maps/Core/Utils/AppRoute.dart';
+import 'package:flutter_maps/Feature/Drawer/Presentation/viewmodel/cubit/cubit.dart';
+import 'package:flutter_maps/Feature/Drawer/Presentation/viewmodel/cubit/state.dart';
+import 'package:go_router/go_router.dart';
 import 'CustomDivider.dart';
 import 'DrawerHeaderWidget.dart';
 import 'SocialContainer.dart';
@@ -44,12 +49,20 @@ class DrawerBody extends StatelessWidget {
                   func: () {},
                 ),
                 const CustomDivider(),
-                drawerItem(
-                  icon: Icons.logout,
-                  txt: "Logout",
-                  iconColor: Colors.red,
-                  tailicon: const SizedBox(),
-                  func: () {},
+                BlocListener<DrawerCubit, DrawerState>(
+                  listener: (context, state) {
+                    // TODO: implement listener
+                  },
+                  child: drawerItem(
+                    icon: Icons.logout,
+                    txt: "Logout",
+                    iconColor: Colors.red,
+                    tailicon: const SizedBox(),
+                    func: () {
+                      DrawerCubit.get(context).logOut();
+                      GoRouter.of(context).pushReplacement(AppRouter.loginScreen);
+                    },
+                  ),
                 )
               ],
             ),
